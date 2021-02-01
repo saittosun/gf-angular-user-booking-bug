@@ -69,3 +69,19 @@ hr {
 .pay-with-auto {
   padding-top: 10px;
 }
+
+@media(max-width: 768px) {
+  .clearfix h2 {
+    font-size: larger;
+  }
+  .clearfix {
+    font-size: smaller;
+  }
+  ::ng-deep .mat-checkbox-layout {
+      white-space: normal !important;
+  }
+
+  ::ng-deep .mat-checkbox-inner-container {
+      margin-top: 3px !important;
+  }
+} 

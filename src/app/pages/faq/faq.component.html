@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="font-weight-bold">Frequently Asked Questions</h1>
+  <div *ngFor="let faq of faqs; let i=index">
+    <div class="font-weight-bold faq-title" (click)="onFaqClick(i)">
+      <span *ngIf="answers[i] && faqArray[i]"  class="material-icons faq-icon">remove_circle_outline </span>
+      <span *ngIf="!(answers[i] && faqArray[i])" class="material-icons faq-icon">add_circle_outline</span>
+      {{ faq }}
+    </div>
+    <div *ngIf="answers[i] && faqArray[i] ">
+      <p class="blog-answer" *ngFor="let answer of answers[i]"> {{ answer }} </p>
+    </div>
+  </div>
+
+</div>

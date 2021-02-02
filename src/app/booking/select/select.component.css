@@ -14,6 +14,16 @@ input[type=number] {
   background: rgb(168, 216, 255);
 }
 
+.route-alternative-dates button:focus {
+  box-shadow: none;
+  background-color: white;
+}
+.route-alternative-dates button:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+}
+/* .date-update-before::before:focus {
+  border-left-color: red;
+} */
 .date-update-before::before {
   content: '';
   position: absolute;
@@ -23,6 +33,7 @@ input[type=number] {
   border-left-color: #f8f9fa;
   transform: rotate(180deg);
 }
+
 .date-update-after::after {
   content: '';
   position: absolute;
@@ -50,7 +61,6 @@ input[type=number] {
 }
 .select-dictionary-plus-icon {
   font-size: 30px;
-  color: red;
 }
 .select-dictionary-check-icon {
   font-size: 30px;
@@ -92,16 +102,25 @@ input[type=number] {
   margin-right: 0; 
   margin-left: 0;
   padding-top: 8px;
-  padding-bottom: 6px;
+  /* padding-bottom: 6px; */
 }
 .trip-major-destination {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 .exact-date {
   font-size: 20px;
 }
+.toggle-icon-div button {
+  padding: 0;
+}
+.toggle-icon-div button {
+  padding: initial;
+  border: none;
+}
 .toggle-icon {
   font-size: 40px;
+  color: white;
 }
 .vehicle-add, .vehicle-minus {
   padding: 4px;
@@ -112,11 +131,14 @@ input[type=number] {
 
 @media(max-width: 280px) {
   .trip-major {
-    padding-bottom: 0;
-    font-size: 13px;
+    /* padding-bottom: 5px;     */
+    line-height: 16px;
+    /* padding-top: 4px; */
   }
   .trip-major-destination {
     font-size: 12px;
+    padding-left: 5px;
+    margin-bottom: 6px;
   }
   .date-update-after::after {
     left: 70%;
@@ -137,20 +159,17 @@ input[type=number] {
   .exact-date {
     padding-left: 12px;
     font-size: 12px;
+    padding-top: 5px;
   }
   .toggle-icon {
     font-size: 24px;
   }
   .toggle-icon-div {
-    margin-left: -17px;
+    margin-left: -8px;
   }
-  .trip-major-destination {
-    padding-left: 5px;
-  }
-  .trip-major {
-    line-height: 16px;
-    font-size: 11px;
-    padding-top: 4px;
+  .toggle-icon-div button {
+    margin-left: inherit;
+    padding: 8px;
   }
   .dictionary {
     margin-left: -15px;
@@ -158,6 +177,7 @@ input[type=number] {
   .dictionary-trips {
     /* font-size: 9px; */
     line-height: initial;
+    margin-bottom: 1rem;
   }
   .icon-groups {
     margin-left: -7px;
@@ -223,6 +243,9 @@ input[type=number] {
   /* .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus {
     padding: inherit;
   } */
+  .passenger-add span, .passenger-minus span{
+    padding: 2px;
+  }
   .grip-line {
     display: none;
   }
@@ -232,12 +255,14 @@ input[type=number] {
     left: -2px;
   }
   .select-button {
-    font-size: small;
-    padding: 5px 0;
+    font-weight: 500 !important;
+    padding: 3px 0;
+    padding-left: revert;
   }
   .thump {
     font-size: small;
-    margin-left: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
     vertical-align: text-top;
   }
 }
@@ -276,6 +301,7 @@ input[type=number] {
   .dictionary-trips {
     font-size: 9px;
     line-height: initial;
+    margin-bottom: 1rem;
   }
   .seat {
     font-size: initial;
@@ -336,8 +362,8 @@ input[type=number] {
     margin-right: 8px;
   }
   .toggle-icon {
-    vertical-align: unset;
-    margin-left: -29px;
+    /* vertical-align: unset; */
+    margin-left: -10px;
     font-size: 28px;
   }
   .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus{
@@ -376,6 +402,7 @@ input[type=number] {
   .dictionary-trips {
     font-size: 9px;
     line-height: initial;
+    margin-bottom: 1rem;
     /* padding-bottom: 1px; */
   }
   .logo {
@@ -444,10 +471,10 @@ input[type=number] {
     font-size: 24px;
   }
   .toggle-icon-div {
-    margin-left: -15px;
+    margin-left: -6px;
   }
   .toggle-icon {
-    vertical-align: text-bottom;
+    vertical-align: -13px;
     font-size: 30px;
   }
   .passenger-add, .passenger-minus, .vehicle-add, .vehicle-minus {
@@ -478,7 +505,7 @@ input[type=number] {
     /* border: 20.5px solid transparent; */
   }
   .toggle-icon {
-    vertical-align: text-bottom;
+    vertical-align: -15px;
     margin-left: -18px;
     font-size: 33px;
   }
@@ -509,6 +536,7 @@ input[type=number] {
   }
   .dictionary-trips {
     font-size: 11px;
+    margin-bottom: 1rem;
     line-height: initial;
   }
   .seat {
@@ -564,7 +592,8 @@ input[type=number] {
   }
   .toggle-icon {
     font-size: 30px;
-    margin-left: -13px;
+    margin-left: -6px;
+    vertical-align: -14px;
   }
   .logo-name {
     margin-left: inherit;
@@ -594,6 +623,7 @@ input[type=number] {
   .dictionary-trips {
     font-size: 11px;
     line-height: initial;
+    margin-bottom: 1rem;
   }
   .exact-date {
     font-size: 15px;
@@ -683,6 +713,7 @@ input[type=number] {
     font-size: 15px;
     line-height: initial;
     padding-top: 12px;
+    margin-bottom: 1rem;
   }
   /* .seat {
     font-size: initial;
@@ -746,6 +777,7 @@ input[type=number] {
   .dictionary-trips {
     font-size: 10px;
     line-height: initial;
+    margin-bottom: 1rem;
   }
   .seat {
     font-size: initial;
@@ -766,18 +798,20 @@ input[type=number] {
 }
 
 @media(min-width: 768px) and (max-width: 991px) {
-  /* .dictionary-trips {
-    font-size: 10px;
-    line-height: initial;
-  } */
-  .trip-major > p {
-    padding-bottom: 0;
+  .dictionary-trips {
+    /* font-size: 10px;
+    line-height: initial; */
+    margin-bottom: 1rem;
+  }
+  .trip-major {
+    padding-bottom: 5px;
   }
   .trip-keyboard-arrow {
     display: none;
   }
   .trip-major-destination {
     font-size: 15px;
+    margin-bottom: 0;
   }
   .logo {
     width: 33px;
@@ -800,6 +834,7 @@ input[type=number] {
   .toggle-icon {
     font-size: 30px;
     margin-right: 1rem;
+    vertical-align: -17px;
   }
   .price {
     font-size: 14px;
@@ -841,7 +876,11 @@ input[type=number] {
     padding-top: 8px;
   }
   .trip-major {
-    padding-bottom: 7px;
+    /* padding-bottom: 7px; */
+    /* padding-top: 3px; */
+  }
+  .exact-date {
+    padding-top: 0;
   }
   .trip-keyboard-arrow {
     display: none;

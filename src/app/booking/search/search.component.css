@@ -2,9 +2,6 @@
   margin-left: 16px;
 }
 
-.search-box {
-	background: rgba(34, 33, 33, 0.7);
-}
 
 ::ng-deep .passenger-count .mat-form-field {
   width: 45%;
@@ -18,12 +15,15 @@
 ::ng-deep .validation-control .mat-form-field-underline::before {
   background: red;
   height: 3px;
- }
+}
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
   background: aliceblue;
 }
 
+.search-box {
+  background: rgba(34, 33, 33, 0.7);
+}
 .message-error {
   margin-left: 0;
   margin-right: 0
@@ -35,6 +35,14 @@
 
 .routes-field {
   width: inherit;
+}
+
+.btn-outline-light:focus {
+  box-shadow: none;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
 }
 
 ::ng-deep .app-trip-date .mat-form-field-flex {
@@ -82,5 +90,14 @@
   }
   ::ng-deep .example-radio-button:not(:first-child) {
     margin-left: 0;
+  }
+}
+
+@media(max-width: 280px) {
+  ::ng-deep .mat-datepicker-content .mat-calendar {
+    width: 265px !important;
+  }
+  .cdk-overlay-pane {
+    right: 7px;
   }
 }

@@ -38,3 +38,24 @@ h4 {
    margin-bottom: 0;
  }
 } 
+
+@media(max-width: 280px) {
+  h1 {
+    font-size: larger;
+  }
+  h2 {
+    font-size: larger;
+  }
+   h2 span {
+     vertical-align: -7px;
+   }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  h2 {
+    font-size: larger;
+  }
+   h2 span {
+     vertical-align: -7px;
+   }
+}

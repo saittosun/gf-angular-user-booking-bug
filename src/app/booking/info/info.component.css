@@ -17,8 +17,8 @@
 
 
  .contacts {
-  margin-left: 15px;
-  background: cadetblue;
+  /* margin-left: 15px;
+  background: cadetblue; */
 }
 
 .passengers {
@@ -45,6 +45,6 @@
 
 @media(max-width: 540px) {
   .contacts {
-    margin-right: 15px;
+    /* margin-right: 15px; */
   }
 }

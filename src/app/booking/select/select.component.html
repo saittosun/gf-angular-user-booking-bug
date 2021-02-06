@@ -40,11 +40,9 @@
                   </span>
                 </button>
                 <button mat-icon-button *ngIf="isDictionaryVisiable[dicIndex]" class="btn btn-outline-secondary" type="button" (click)="toggleDictionary(dicIndex)">
-                  <mat-icon>
                     <span class="material-icons toggle-icon">
                       toggle_off
                     </span>
-                  </mat-icon>
                 </button>
               </div>
             </div>
@@ -99,10 +97,10 @@
                 </div>
                 <div class="col-3 col-md-3 col-lg-2 icon-buttons">
                   <div class="row">
-                    <div class="col-4 col-md-3 icon-groups">   
+                    <div class="col-4 col-md-3 icon-groups">
                       <span  class="material-icons" type="button" *ngIf="!hasAccommodation(dicIndex, tripIndex)">
                         cancel
-                      </span> 
+                      </span>
                       <span class="material-icons seat" type="button">
                         airline_seat_recline_extra
                       </span>
@@ -113,7 +111,7 @@
                       </span>
                       <span class="material-icons" type="button" *ngIf="!hasVesselCabin(dicIndex, tripIndex)">
                         cancel
-                      </span>   
+                      </span>
                     </div>
                     <div class="col-4 col-md-3 car">
                       <span class="material-icons" type="button" *ngIf="!hasVesselGarage(dicIndex, tripIndex)">

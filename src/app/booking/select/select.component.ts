@@ -19,7 +19,7 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-select',
   templateUrl: './select.component.html',
-  styleUrls: ['./select.component.css'],
+  styleUrls: ['./select-main.component.css', './select-details.component.css', 'select-responsive.component.css'],
 })
 export class SelectComponent implements OnInit {
   searchResponse: SearchResponse;
